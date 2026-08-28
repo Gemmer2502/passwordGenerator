@@ -1,2 +1,3 @@
-passwords.txt
+passwords.enc
 .venv
+salt.txt
