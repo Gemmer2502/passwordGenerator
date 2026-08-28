@@ -72,8 +72,18 @@ password = ''.join(secrets.choice(characters) for _ in range(int(num_characters)
 with open("password.txt", "w") as f:
     f.write(password)
 
-pyperclip.copy(password)
 
-
-print(Fore.GREEN + "Your password is: " + password + "\nIt has been saved in password.txt and copied to your clipboard.")
+print(Fore.GREEN + "Your password is: " + password + "\nIt has been saved in password.txt.")
 print(Fore.RESET)
+
+
+print(Fore.YELLOW + "Do you want to copy it to the clipboard ? (y/n)")
+clipboard = input().lower()
+
+if clipboard == "y":
+    pyperclip.copy(password)
+    print(Fore.GREEN + "Password copied to clipboard.")
+    print(Fore.RESET)
+else:
+    print(Fore.RED + "Password not copied to clipboard.")
+    print(Fore.RESET)
