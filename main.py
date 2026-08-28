@@ -69,11 +69,15 @@ characters = options.get(int(choice))
 password = ''.join(secrets.choice(characters) for _ in range(int(num_characters)))
 
 
-with open("password.txt", "w") as f:
-    f.write(password)
+print("For which service is this password ?(website, email...)")
+service = input()
 
 
-print(Fore.GREEN + "Your password is: " + password + "\nIt has been saved in password.txt.")
+with open("passwords.txt", "a") as f:
+    f.write(f"{service}: {password}\n")
+
+
+print(Fore.GREEN + "Your password is: " + password + "\nIt has been saved in passwords.txt.")
 print(Fore.RESET)
 
 
@@ -85,5 +89,5 @@ if clipboard == "y":
     print(Fore.GREEN + "Password copied to clipboard.")
     print(Fore.RESET)
 else:
-    print(Fore.RED + "Password not copied to clipboard.")
+    print(Fore.WHITE + "Password not copied to clipboard.")
     print(Fore.RESET)

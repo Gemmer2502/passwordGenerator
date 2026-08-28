@@ -1,5 +1,5 @@
 A password generator to train myself.
-You can choose the length of the password and the characters used. Show the password in the console, write it in a file called "password.txt" and you have the possibility to copy it to your clipboard.
+You can choose the length of the password and the characters used. Show the password in the console, write it in a file called "passwords.txt" and you have the possibility to copy it to your clipboard.
 
 INSTALLATION:
 -"git clone git@github.com:Gemmer2502/passwordGenerator.git"
