@@ -1,5 +1,6 @@
 from colorama import Fore
 import secrets
+import pyperclip
 
 
 print(Fore.MAGENTA + r"""__________                          ________
@@ -71,6 +72,8 @@ password = ''.join(secrets.choice(characters) for _ in range(int(num_characters)
 with open("password.txt", "w") as f:
     f.write(password)
 
+pyperclip.copy(password)
 
-print(Fore.GREEN + "Your password is: " + password + "\nIt has been saved in password.txt")
+
+print(Fore.GREEN + "Your password is: " + password + "\nIt has been saved in password.txt and copied to your clipboard.")
 print(Fore.RESET)
