@@ -1,5 +1,5 @@
 from colorama import Fore
-import random
+import secrets
 
 
 print(Fore.MAGENTA + r"""__________                          ________
@@ -65,7 +65,7 @@ options = {
 
 characters = options.get(int(choice))
 
-password = ''.join(random.choice(characters) for _ in range(int(num_characters)))
+password = ''.join(secrets.choice(characters) for _ in range(int(num_characters)))
 
 
 with open("password.txt", "w") as f:
