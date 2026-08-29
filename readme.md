@@ -72,7 +72,7 @@ pip install -r requirements.txt
 Start the program with:
 
 ```bash
-python main.py
+python Scripts/main.py
 ```
 
 The program will ask for your **master password** when it starts.
@@ -129,11 +129,19 @@ salt.txt
 
 ```text
 passwordGenerator/
-├── main.py
+│
+├── .gitignore
 ├── requirements.txt
-├── salt.txt
-├── passwords.enc
-└── README.md
+├── README.md
+│
+└── Scripts/
+    ├── main.py
+    ├── fonctionVariableAndDictionnary.py
+    ├── generateEncryptWrite.py
+    ├── readPassword.py
+    ├── settingsEncrypt.py
+    ├── passwords.enc
+    └── salt.txt
 ```
 
 `passwords.enc` and `salt.txt` are generated/used by the application and should generally **not be committed to a public repository**.
