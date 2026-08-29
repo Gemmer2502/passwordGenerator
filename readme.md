@@ -134,12 +134,15 @@ passwordGenerator/
 ├── requirements.txt
 ├── README.md
 │
-└── Scripts/
-    ├── main.py
-    ├── fonctionVariableAndDictionnary.py
-    ├── generateEncryptWrite.py
-    ├── readPassword.py
-    ├── settingsEncrypt.py
+├── Scripts/
+│   ├── main.py
+│   ├── fonctionVariableAndDictionnary.py
+│   ├── generateEncryptWrite.py
+│   ├── readPassword.py
+│   ├── deletePassword.py
+│   └── settingsEncrypt.py
+│
+└── Data/
     ├── passwords.enc
     └── salt.txt
 ```
