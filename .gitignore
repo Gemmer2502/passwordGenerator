@@ -1,3 +1,4 @@
-passwords.enc
+Scripts/passwords.enc
 .venv
-salt.txt
+Scripts/salt.txt
+Scripts/__pycache__
