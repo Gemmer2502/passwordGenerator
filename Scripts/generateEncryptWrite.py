@@ -32,5 +32,5 @@ def generate_password():
 
 
 def write_encryptedPassword(f, serviceAndPass):
-    with open("passwords.enc", "ab") as passFile:
+    with open("Data/passwords.enc", "ab") as passFile:
         passFile.write(f.encrypt((serviceAndPass).encode()) + b"\n")

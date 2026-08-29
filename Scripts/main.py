@@ -1,7 +1,8 @@
-from fonctionVariableAndDictionnary import greetings, error, success, clipboard, verify_int
+from fonctionVariableAndDictionnary import greetings, error, success, clipboard, verify_int, information
 from settingsEncrypt import settings, masterPassword_creationKey
 from generateEncryptWrite import generate_password, write_encryptedPassword
 from readPassword import read_password
+from deletePassword import del_password
 
 
 greetings()
@@ -35,7 +36,26 @@ while True:
             clipboard(password)
 
         elif mode == 2:
-            read_password(f)
+            possible, count = read_password(f)
+
+            if possible:
+                while True:
+                    print("Do you want to delete a password (1), modify a password (2) or go back to the menu (3)?")
+                    choice = input()
+
+                    if verify_int(choice) == False or int(choice) < 1 or int(choice) > 3:
+                        error("Must be a number between 1 and 3.")
+                    else:
+                        choice = int(choice)
+
+                        if choice == 1:
+                            del_password(count)
+
+                        if choice == 2:
+                            information("Mécanique a ajouter !")
+
+                        if choice == 3:
+                            break
 
 
         elif mode == 3:

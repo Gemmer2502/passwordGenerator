@@ -6,12 +6,12 @@ import base64
 
 
 def salt():
-    if os.path.exists("salt.txt"):
-        with open("salt.txt", "rb") as f:
+    if os.path.exists("Data/salt.txt"):
+        with open("Data/salt.txt", "rb") as f:
             salt = f.read()
     else:
         salt = os.urandom(16)
-        with open("salt.txt", "wb") as f:
+        with open("Data/salt.txt", "wb") as f:
             f.write(salt)
     return salt
 
